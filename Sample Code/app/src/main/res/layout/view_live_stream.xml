@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <merge xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.dji.sdk.sample.internal.utils.VideoFeedView
+                android:id="@+id/video_view_primary_video_feed"
+                style="@style/main_camera_view"
+                android:layout_width="699dp"
+                android:layout_height="268dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="false"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp" />
+
+            <com.dji.sdk.sample.internal.utils.VideoFeedView
+                android:id="@+id/video_view_fpv_video_feed"
+                style="@style/main_camera_view"
+                android:layout_below="@+id/video_view_primary_video_feed"
+                android:layout_alignParentBottom="false"
+                android:layout_marginTop="10dp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/edit_live_show_url_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/video_view_fpv_video_feed"
+                android:inputType="textUri" />
+
+            <Button
+                android:id="@+id/btn_start_live_show"
+                style="@style/common_button"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_live_show_url_input"
+                android:layout_marginTop="9dp"
+                android:text="Start Live Show" />
+
+            <Button
+                android:id="@+id/btn_stop_live_show"
+                style="@style/common_button"
+                android:layout_width="94dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit_live_show_url_input"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="11dp"
+                android:layout_toEndOf="@+id/btn_start_live_show"
+                android:text="Stop Live Show" />
+
+            <Button
+                android:id="@+id/btn_start_take_off"
+                style="@style/common_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit_live_show_url_input"
+                android:layout_marginStart="129dp"
+                android:layout_marginTop="11dp"
+                android:layout_toEndOf="@+id/btn_start_live_show"
+                android:text="Start Take Off" />
+
+            <Button
+                android:id="@+id/btn_start_landing"
+                style="@style/common_button"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit_live_show_url_input"
+                android:layout_marginStart="242dp"
+                android:layout_marginTop="12dp"
+                android:layout_toEndOf="@+id/btn_start_live_show"
+                android:text="Start Landing" />
+
+            <Button
+                android:id="@+id/btn_start_go_home"
+                style="@style/common_button"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_start_live_show"
+                android:layout_marginTop="12dp"
+                android:text="Start Go Home" />
+
+            <Button
+                android:id="@+id/btn_visual_mode"
+                style="@style/common_button"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_stop_live_show"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="13dp"
+                android:layout_toEndOf="@+id/btn_start_live_show"
+                android:text="Visual   Mode" />
+
+            <Button
+                android:id="@+id/btn_thermal_mode"
+                style="@style/common_button"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_stop_live_show"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="13dp"
+                android:layout_toEndOf="@+id/btn_visual_mode"
+                android:text="Thermal Mode" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="294dp"
+                android:layout_height="196dp"
+                android:layout_below="@+id/edit_live_show_url_input"
+                android:layout_marginLeft="22pt"
+                android:layout_marginTop="149dp"
+                app:srcCompat="@drawable/_d3b05f8d5831" />
+
+        </RelativeLayout>
+        </ScrollView>
+    </merge>
